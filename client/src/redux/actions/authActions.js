@@ -49,3 +49,21 @@ export const current=()=>async(dispatch)=>{
          type:LOGOUT
      }
  }
+
+// edit profile 
+ export const editprofile=(formData , navigate)=>async(dispatch)=>
+ { 
+     const config={
+         headers:{
+             "authorization":localStorage.getItem('token')
+         }
+     }
+  try {
+      const res=await axios.put('/api/user/editprofile',formData,config)
+      console.log(res.data)
+      dispatch (current())
+      navigate ('/user/profile')
+  } catch (error) {
+      console.log (error)
+  }
+ }

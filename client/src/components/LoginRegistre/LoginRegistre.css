@@ -1,21 +1,18 @@
-/* body{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-} */
-.main{
+
+.mainLoginRegistre{
 	width: 350px;
 	height: 500px;
 	/* background: red; */
 	overflow: hidden;
-	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	
 	border-radius: 10px;
-	box-shadow: 5px 20px 50px rgb(255, 255, 255);
+ margin-left: 500px;
+ padding-top: 0;
+ background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../../images/background.jpg);
+ background-position: center; 
+ background-size: cover;
+ position :relative;
+	
 }
 #chk{
 	display: none;
@@ -26,7 +23,7 @@
 	height: 100%;
 	background: red;
 }
-label{
+.labelLoginRegistre{
 	color: rgb(0, 0, 0);
 	font-size: 3em;
 	justify-content: center;
@@ -36,7 +33,7 @@ label{
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-input{
+.inputLoginRegistre{
 	width: 80%;
 	height: 20px;
 	background: #fdfdfd;
@@ -48,7 +45,7 @@ input{
 	outline: none;
 	border-radius: 5px;
 }
-button{
+.buttonLoginRegistre{
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
@@ -65,7 +62,7 @@ button{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
-button:hover{
+.buttonLoginRegistre:hover{
 	background:rgb(3, 49, 255);
 }
 .login{

@@ -1,6 +1,6 @@
-.headerApp
-{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;  
+* {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../src/images/background.jpg);
+    background-position: center; 
+    background-size: cover;
+    position :relative;
 }

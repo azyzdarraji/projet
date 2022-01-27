@@ -99,5 +99,22 @@ router.get("/current", isAuth, async (req, res) => {
     res.status(500).send("server error ");
   }
 });
+//edit Profile
+
+
+router.put('/editprofile' ,isAuth, async(req,res)=>{
+
+  try {
+    const userId=req.user.id 
+    const user=await User.findByIdAndUpdate (userId,{$set:{...req.body}})
+    res.send (user)
+  } catch (error) {
+    console.log(error)
+  }
+}) 
+
+
+
+
 
 module.exports = router;

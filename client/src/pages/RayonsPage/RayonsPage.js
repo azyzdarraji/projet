@@ -1,76 +1,74 @@
 import "./RayonsPage.css"
-import pt from "../../assets/petit dej.jpg"
-import pate from "../../assets/pate.jpg"
-import pn from "../../assets/produit de netyoage.jpg"
-import el from "../../assets/el.jpg"
-import {Link} from 'react-router-dom'
+import pt from "../../images/petit dej.jpg"
+import pate from "../../images/pate.jpg"
+import pn from "../../images/produit de netyoage.jpg"
+import el from "../../images/el.jpg"
+import {useNavigate} from "react-router-dom"
 
 
 function RayonsPage ()
-{
+{ 
+  const navigate=useNavigate()
     return (
-      <div className="container"> 
-       <Link to='/user/rayons/petitdej'>
-        <form>
-        <div className="card">
-          <h3 className="title"> Petit Dejeuner</h3>
-          <div className="bar">
-            <div className="emptybar" />
-            <div className="filledbar" />
+      
+      <div className="containerRayonsPage"> 
+       
+        <form onClick={()=>navigate(`/user/rayons/productlist/${1}`)}>
+        <div className="cardRayonsPage">
+          <h3 className="titleRayonsPage"> Petit Dejeuner</h3>
+          <div className="barRayonsPage">
+            <div className="emptybarRayonsPage" />
+            <div className="filledbarRayonsPage" />
           </div>
-          <div className="circle">
+          <div className="circleRayonsPage">
               <img src ={pt} alt="petitdej"  />
           </div>
         </div>
         </form>
-        </Link> 
+      
 
-        <Link to='/user/rayons/pate'>
+         {/* to={`/user/rayons/productlist/${2}`} */}
 
-        <form>
-        <div className="card">
-          <h3 className="title">Pâtes</h3>
-          <div className="bar">
-            <div className="emptybar" />
-            <div className="filledbar" />
+         <form onClick={()=>navigate(`/user/rayons/productlist/${2}`)}>
+
+        <div className="cardRayonsPage">
+          <h3 className="titleRayonsPage">Pâtes</h3>
+          <div className="barRayonsPage">
+            <div className="emptybarRayonsPage" />
+            <div className="filledbarRayonsPage" />
           </div>
-          <div className="circle">
+          <div className="circleRayonsPage">
             <img src ={pate} alt="pate" />
           </div>
         </div>
         </form>
-        </Link>
         
 
-        <Link to="/user/rayons/produitnettoyage">
-        <form>
-        <div className="card">
-          <h3 className="title">Produits de nettoyage </h3>
-          <div className="bar">
-            <div className="emptybar" />
-            <div className="filledbar" />
+       <form onClick={()=>navigate(`/user/rayons/productlist/${3}`)}>
+        <div className="cardRayonsPage">
+          <h3 className="titleRayonsPage">Produits de nettoyage </h3>
+          <div className="barRayonsPage">
+            <div className="emptybarRayonsPage" />
+            <div className="filledbarRayonsPage" />
           </div>
-          <div className="circle">
+          <div className="circleRayonsPage">
             <img src={pn} alt="produit de netoyage"  />
           </div>
         </div>
         </form>
-        </Link>
 
-        <Link to="/user/rayons/electromenager">
-        <form>
-        <div className="card">
-          <h3 className="title"> Électroménager</h3>
-          <div className="bar">
-            <div className="emptybar" />
-            <div className="filledbar" />
+      <form onClick={()=>navigate(`/user/rayons/productlist/${4}`)}>
+        <div className="cardRayonsPage">
+          <h3 className="titleRayonsPage"> Électroménager</h3>
+          <div className="barRayonsPage">
+            <div className="emptybarRayonsPage" />
+            <div className="filledbarRayonsPage" />
           </div>
-          <div className="circle">
-          <img src={el} alt="electromenager" />
+          <div className="circleRayonsPage">
+          <img src={el} alt="electromenagerrayons" />
           </div>
         </div>
         </form>
-        </Link>
       </div>
     )
 }

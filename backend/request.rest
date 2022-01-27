@@ -23,3 +23,43 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDgxOGRjNDhiNTY5
 
 ###
 POST http://localhost:6000
+
+###
+GET http://localhost:6000/api/product/getallproducts/4
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDgxOGRjNDhiNTY5OGY0NjI5ZDExZCIsImlhdCI6MTY0MjA2OTMwMywiZXhwIjoxNjQyMTU1NzAzfQ.uR2BECof61d8_1B62zul0mRRp6IMMZkVGAUe9OIZKrs
+
+###
+GET http://localhost:6000/api/admin/allUsers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDgxOGRjNDhiNTY5OGY0NjI5ZDExZCIsImlhdCI6MTY0MjM3NTA2MywiZXhwIjoxNjQyNDYxNDYzfQ.F4d0JqNLZwGhUto3Jp4_TESY0OUxReDoa_6zbAnt4h4
+
+###
+
+POST http://localhost:6000/api/product/addproduct
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGRkZDdiNDI2NDEwZDZlMDFjMTY3NyIsImlhdCI6MTY0MjU5MzU2NSwiZXhwIjoxNjQyNjc5OTY1fQ.XYtab6WbFBgocgyfuN7679o_V5ve5JvHL-Cd-ynO7uo
+Content-Type: application/json
+
+{
+    "name":"g",
+    "description":"h",
+    "prix":"g",
+    "disponible":"k",
+    "solide":"jj",
+    "rayon":4
+}
+
+###
+PUT http://localhost:6000/api/product/updateproduct/61e94b53243f1324e23d4caa
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGRkZDdiNDI2NDEwZDZlMDFjMTY3NyIsImlhdCI6MTY0MjY3Nzg3NSwiZXhwIjoxNjQyNzY0Mjc1fQ.oKzGC4gdakxIBVjA89sUby5QMGOO3V9BJB77jHTYcRQ
+Content-Type: application/json 
+
+{
+    "name": "batata" ,
+"description" :"batata",
+"prix":"batata",
+"disponible":"batata",
+"solde": "batata",
+"rayon" : 3
+}
+
+
+

@@ -3,12 +3,12 @@ const Produit =require('../models/Produit')
 // ADD NEW PRODUCT  ROLE ADMIN 
 
 exports.addProduct=async(req,res)=>{
-    const {name ,description ,prix,disponible,solide,rayon}=req.body
-
-
+    let {name ,description ,prix,imageUrl,disponible,solde,rayon}=req.body
+   rayon=Number(rayon)
+console.log(req.body)
     try {
         const produit= new Produit ({
-            name,description,prix,disponible,solide,rayon
+            name,description,prix,imageUrl,disponible,solde,rayon
         })
 
         await produit.save()
@@ -34,9 +34,9 @@ exports.deleteProduct=async(req,res)=>{
 
 // GET ALL PRODUCTS 
 exports.getAllProducts=async(req,res)=>{
-
+const rayon=req.params.rayon
     try {
-        const products= await Produit.find()
+        const products= await Produit.find({rayon})
         res.status(200).send({msg:"list of products",products})
     } catch (error) {
        res.status(500).send('err ') 
@@ -62,13 +62,23 @@ console.log(error)
 // UPDATE PRODUCT ROLE ADMIN 
 
 exports.updateProduct=async (req,res)=>{
-    
+    const rayon=Number(req.body.rayon)
     const {productId}=req.params
-    // const {name,prix,disponible,solide}=req.body
 try {
-    await Produit.findByIdAndUpdate(productId,{$set:{...req.body}})
+ 
+    await Produit.findByIdAndUpdate(productId,{$set:{...req.body,rayon}})
     res.status(200).send("product updated")
 } catch (error) {
     res.status(500).send('product not updated')
 }
 }
+
+// GET ALL PRODUCTS 
+exports.AllProducts=async(req,res)=>{
+        try {
+            const products= await Produit.find()
+            res.status(200).send({msg:"list of products",products})
+        } catch (error) {
+           res.status(500).send('err ') 
+        }
+    }

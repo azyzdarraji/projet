@@ -1,64 +1,64 @@
 
-.container {
-  position: absolute;
-  height: 300px;
-  width: 600px;
-  top: 60px;
-  /* left: calc(50% - 300px); */
+.containerRayonsPage {
+  position: relative;
+  height: 1%;
+  width: 80%;
   display: flex;
   font-family: 'Open Sans', sans-serif;
-  flex-direction: row;
   justify-content: space-around;
-  /* align-items:center; */
+  align-items:center;
+  margin: 0 100px;
 }
 img 
 {
-  width: 100%;
+  width: 90%;
   height: 120px;
   position: relative;
   margin-right: 50px;
+  border-radius: 50%;
 }
 
-.card {
+.cardRayonsPage {
   display: flex;
   height: 300px;
   width: 250px;
-  background-color: #fffb07;
+  background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: -1rem 0 3rem rgb(192, 0, 0);
-/*   margin-left: -50px; */
+  box-shadow: -1rem 0 3rem rgb(12, 12, 12); 
+   margin-left: -50px;
   transition: 0.4s ease-in-out;
   position: relative;
   left: 0px;
   top: 100px;
   padding-right: 200px;
+  margin:5px 5px 5px 5px;
+  border: solid 1px rgb(255, 8, 8);
 }
 
-.card:not(:first-child) {
-    margin: 20px 20px 20px 2px;
-}
 
-.card:hover {
+.cardRayonsPage:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.cardRayonsPage:hover ~ .cardRayonsPage {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
+
 }
 
-.title {
-  color: rgb(253, 0, 0);
+.titleRayonsPage {
+  color: #fc0000;
   font-weight: 300;
   position: absolute;
   left: 20px;
   top: 15px;
-  border:solid 1px yellow ;
+  text-align:center;
+  align-items: center;
 }
 
-.bar {
+.barRayonsPage {
   position: absolute;
   top: 100px;
   left: 20px;
@@ -66,35 +66,35 @@ img
   width: 150px;
 }
 
-.emptybar {
+.emptybarRayonsPage {
   background-color: #fc0000;
   width: 100%;
   height: 100%;
 }
 
-.filledbar {
+.filledbarRayonsPage {
   position: absolute;
   top: 0px;
   z-index: 3;
   width: 0px;
   height: 100%;
-  /* background: rgb(0,154,217); */
+  background: rgb(0,154,217);
   background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgb(255, 1, 1) 65%, rgba(255,186,0,1) 100%);
   transition: 0.6s ease-out;
 }
 
-.card:hover .filledbar {
+.cardRayonsPage:hover .filledbaRayonsPage {
   width: 120px;
   transition: 0.4s ease-out;
 }
 
-.circle {
+.circleRayonsPage {
   position: absolute;
   top: 150px;
   left: calc(50% - 60px);
 }
 
-.stroke {
+.strokeRayonsPage {
   stroke: white;
   stroke-dasharray: 360;
   stroke-dashoffset: 360;
@@ -102,7 +102,7 @@ img
 }
 
 
-.card:hover .stroke {
+.cardRayonsPage:hover .strokeRayonsPage {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
 }

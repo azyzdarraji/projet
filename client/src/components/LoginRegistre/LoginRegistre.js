@@ -35,17 +35,17 @@ const handleSubmitLogin=(e)=>{
   dispatch(login(formLogin,navigate))
 }
     return(
-        <div className="main">  	
-        <input type="checkbox" id="chk" aria-hidden="true" />
+        <div className="mainLoginRegistre">  	
+        <input type="checkbox" id="chk" aria-hidden="true" className='inputLoginRegistre' />
         <div className="signup">
           <form onSubmit={handleSubmit}>
 
-            <label htmlFor="chk" aria-hidden="true"> S'inscrire</label>
-            <input type="text" name="firstname" placeholder="First name" required onChange={handleChange} />
-            <input type="text" name="lastname" placeholder="Last name" required  onChange={handleChange}/>
-            <input type="email" name="email" placeholder="Email" required  onChange={handleChange} />
-            <input type="password" name="password" placeholder="Password" required onChange={handleChange}/>
-            <button type='submit'>s'inscrire</button>
+            <label htmlFor="chk" aria-hidden="true" className='labelLoginRegistre'> S'inscrire</label>
+            <input  className='inputLoginRegistre' type="text" name="firstname" placeholder="First name" required onChange={handleChange}  />
+            <input className='inputLoginRegistre' type="text" name="lastname" placeholder="Last name" required  onChange={handleChange}/>
+            <input className='inputLoginRegistre' type="email" name="email" placeholder="Email" required  onChange={handleChange} />
+            <input className='inputLoginRegistre' type="password" name="password" placeholder="Password" required onChange={handleChange}/>
+            <button className='buttonLoginRegistre' type='submit'>s'inscrire</button>
             <div className="social-icons">
 					<a href="#" className="social-login__icon fab fa-instagram"></a>
 					<a href="#" className="social-login__icon fab fa-facebook"></a>
@@ -55,10 +55,10 @@ const handleSubmitLogin=(e)=>{
         </div>
         <div className="login">
           <form  onSubmit={handleSubmitLogin} > 
-            <label htmlFor="chk" aria-hidden="true">Connexion</label>
-            <input type="email" name="email" placeholder="Email" required onChange={handleChangeLogin}/>
-            <input type="password" name="password" placeholder="Password" required onChange={handleChangeLogin} />
-            <button>Connexion</button>
+            <label  className='labelLoginRegistre' htmlFor="chk" aria-hidden="true" >Connexion</label>
+            <input  className='inputLoginRegistre' type="email" name="email" placeholder="Email" required onChange={handleChangeLogin}/>
+            <input className='inputLoginRegistre' type="password" name="password" placeholder="Password" required onChange={handleChangeLogin} />
+            <button className='buttonLoginRegistre'>Connexion</button>
             <div className="social-icons">
 					<a href="#" className="social-login__icon fab fa-instagram"></a>
 					<a href="#" className="social-login__icon fab fa-facebook"></a>

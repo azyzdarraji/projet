@@ -1,7 +1,7 @@
 const express= require('express')
 const router=express.Router()
 const produit=require('../models/Produit')
-const {addProduct, deleteProduct, getAllProducts,getOneProduct,updateProduct} =require ('../controllers/produit')
+const {addProduct, deleteProduct, getAllProducts,getOneProduct,updateProduct,AllProducts} =require ('../controllers/produit')
 const { productRules,validator } = require('../middelwares/validator')
 const isAuth = require("../middelwares/isAuth");
 
@@ -33,7 +33,7 @@ router.delete('/deleteproduct/:productId',isAuth,deleteProduct)
 //url /getallproducts
 // Product.find 
 
-router.get('/getallproducts',isAuth,getAllProducts)
+router.get('/getallproducts/:rayon',isAuth,getAllProducts)
 
 // methode get 
 // url /getoneproduct/:productId
@@ -47,5 +47,11 @@ router.get('/getoneproduct/:productId',isAuth,getOneProduct)
 //req.body
 //req.params
 router.put('/updateproduct/:productId',isAuth,updateProduct)
+
+//methode get 
+//url /allproducts
+// Product.find 
+
+router.get('/allproducts',isAuth,AllProducts)
 
 module.exports=router

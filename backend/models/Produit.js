@@ -12,6 +12,10 @@ const produitShema=new schema ({
         required:true
     },
     prix:{
+        type:Number ,
+        required:true
+    },
+    imageUrl:{
         type:String ,
         required:true
     },
@@ -21,7 +25,7 @@ const produitShema=new schema ({
     solde: {
         type:String 
     },
-    rayons:{
+    rayon:{
         type:Number,
         required:true
     }

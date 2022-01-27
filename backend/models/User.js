@@ -19,6 +19,10 @@ const userShema=new schema ({
     password :{
         type:String ,
         required:true
+    },
+    role:{
+        type:Number, 
+        default:0
     }        
     }
 )

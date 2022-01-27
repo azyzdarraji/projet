@@ -6,7 +6,7 @@ const productRules=[
     body('description',"description is required").notEmpty(),
     body('prix',"prix is required").notEmpty(),
     body('disponible',"disponible is required").notEmpty(),
-    body('solide',"solide is required").notEmpty(),
+    body('solde',"solde is required").notEmpty(),
     body('rayon',"srayon is required").notEmpty()
 
 ]
@@ -26,7 +26,7 @@ const loginRules = [
 
 
 const validator =(req,res , next)=>{
-    console.log(req.body)
+
     const error = validationResult (req);
     if (!error .isEmpty()) {
         return res.status(400).send({errors: error.array()})
