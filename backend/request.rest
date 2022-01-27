@@ -1,0 +1,25 @@
+POST http://localhost:6000/api/user/signup
+Content-Type:application/json
+
+{
+    "firstname":"mohamed",
+    "lastname":"taher",
+    "email":"mohamed@gmail.com",
+    "password":"123456"
+}
+
+###
+POST http://localhost:6000/api/user/signin
+Content-Type: application/json
+
+{
+    "email":"mohamed@gmail.com",
+    "password":"123456"
+}
+
+###
+GET http://localhost:6000/api/product/getallproducts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDgxOGRjNDhiNTY5OGY0NjI5ZDExZCIsImlhdCI6MTY0MTU1MjI3NSwiZXhwIjoxNjQxNjM4Njc1fQ.g-9BLd9nuuu81gqYJ6TDN8-cAt3qFeLUZsZt1DWV9U0
+
+###
+POST http://localhost:6000
